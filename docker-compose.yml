@@ -1,0 +1,14 @@
+services:
+  greeter:
+    build:
+      context: .
+    image: doting
+    env_file: docker-compose.env
+    environment:
+      SERVICES: greeter
+    networks:
+      - internal
+
+
+networks:
+  internal:
